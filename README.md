@@ -31,6 +31,32 @@ This script will:
 export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
 ```
 
+### Troubleshooting
+
+If you encounter `conda: command not found`, first verify that Miniconda is installed:
+
+```bash
+ls -d ~/miniconda3
+```
+
+If the `miniconda3` directory exists, follow these steps to fix the issue:
+
+1. Manually load the Conda configuration:
+   ```bash
+   source ~/miniconda3/bin/activate
+   ```
+
+2. Initialize Conda for your shell:
+   ```bash
+   conda init
+   ```
+
+3. Restart your terminal or reload your shell configuration:
+   ```bash
+   source ~/.bashrc  # or ~/.zshrc for Zsh users
+   ```
+
+
 ## Verification
 
 A verification script `verify_jdec.py` is included to test the model on a sample image. It performs compression, restoration, and generates comparison artifacts.
